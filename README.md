@@ -1,4 +1,4 @@
-# Editor Syntax Highlight Obsidian Plugin
+# Code block copy Obsidian Plugin
 A plugin for [Obsidian](https://obsidian.md) that provides copy buttons on code blocks in preview.
 
 ![Screenshot](https://github.com/jdbrice/obsidian-code-block-copy/raw/main/screenshot.png)
