@@ -1,6 +1,11 @@
 import './styles.scss'
 import { App, Plugin, PluginManifest, MarkdownView  } from "obsidian";
 
+const excludeLangs = [ 
+  "todoist"
+];
+
+
 export default class CMSyntaxHighlightPlugin extends Plugin {
 
   constructor(app: App, pluginManifest: PluginManifest) {
@@ -24,6 +29,12 @@ export default class CMSyntaxHighlightPlugin extends Plugin {
     document.querySelectorAll('pre > code').forEach(function (codeBlock) {
 
       var pre = codeBlock.parentNode;
+      
+      // check for excluded langs
+      for ( let lang of excludeLangs ){
+        if (pre.classList.contains( `language-${lang}` ))
+          return;
+      }
 
       // Dont add more than once
       if (pre.parentNode.classList.contains('has-copy-button')) {

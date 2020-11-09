@@ -12,6 +12,8 @@ This plugin adds a copy button to the top right of code blocks in preview mode.
 Custom plugins are only available for Obsidian v0.9.7+.
 The current API of this repo targets Obsidian **v0.9.7+**. 
 
+
+
 ## Installation
 
 ### From within Obsidian
@@ -55,5 +57,9 @@ dependencies are installed use `npm run dev` to start compilation in watch mode.
 You may have to reload obsidian (`ctrl+R`) to see changes.
 
 # Version History
+
+## v0.2.0
+Add excluded languages, currently only includes "todoist" to be compatible with the todoist plugin. Will add setting page to add custom exclude languages in future.
+
 ## v0.1.0
 Initial Release.  
