@@ -1,6 +1,6 @@
 {
   "name": "code-block-copy",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "Copy button for code blocks",
   "main": "main.js",
   "scripts": {
