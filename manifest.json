@@ -1,8 +1,8 @@
 {
   "id": "code-block-copy",
-  "name": "Copy button for code blocks",
+  "name": "Copy button for code blocks (fixed version manifest)",
   "author": "Daniel Brandenburg",
-  "description": "Copy button for code blocks",
+  "description": "Temporary version fix released by Nathaniel Palmer of source project by Daniel Brandenburg (https:\/\/github.com\/jdbrice\/obsidian-code-block-copy)",
   "isDesktopOnly": false,
-  "version": "0.2.0"
+  "version": "0.2.1"
 }
