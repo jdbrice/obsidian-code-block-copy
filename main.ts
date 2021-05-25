@@ -1,7 +1,7 @@
 import './styles.scss'
 import { App, Plugin, PluginManifest, MarkdownView  } from "obsidian";
 
-const excludeLangs = [ 
+const excludeLangs = [
   "todoist"
 ];
 
@@ -29,7 +29,7 @@ export default class CMSyntaxHighlightPlugin extends Plugin {
     document.querySelectorAll('pre > code').forEach(function (codeBlock) {
 
       var pre = codeBlock.parentNode;
-      
+
       // check for excluded langs
       for ( let lang of excludeLangs ){
         if (pre.classList.contains( `language-${lang}` ))
@@ -46,26 +46,26 @@ export default class CMSyntaxHighlightPlugin extends Plugin {
         button.className = 'copy-code-button';
         button.type = 'button';
         button.innerText = 'Copy';
-  
+
         button.addEventListener('click', function () {
             clipboard.writeText(codeBlock.innerText).then(function () {
                 /* Chrome doesn't seem to blur automatically,
                    leaving the button in a focused state. */
                 button.blur();
-  
-                button.innerText = 'copied!';
-  
+
+                button.innerText = 'Copied!';
+
                 setTimeout(function () {
-                    button.innerText = 'copy';
+                    button.innerText = 'Copy';
                 }, 2000);
             }, function (error) {
                 button.innerText = 'Error';
             });
         });
-  
+
         pre.appendChild(button);
-        
+
     });
   }
-  
+
 }
