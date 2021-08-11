@@ -5,8 +5,8 @@ const excludeLangs = [
   "todoist"
 ];
 
-const svgCopy = '<svg viewBox="0 0 100 100" width="20" height="20" class="documents"><path fill="currentColor" stroke="currentColor" d="M74,4c-0.1,0-0.2,0-0.3,0H40v11.5l4,4V8h28v20h20v48H64v4h32V26.3c0-0.2,0-0.4,0-0.6v-0.5l-0.4-0.4 c-0.1-0.1-0.2-0.3-0.4-0.4c0,0,0,0,0,0L75.6,4.8c-0.1-0.1-0.2-0.3-0.4-0.4L74.8,4h-0.5C74.2,4,74.1,4,74,4L74,4z M76,10.8L89.2,24 H76V10.8z M38,20c-0.1,0-0.2,0-0.3,0H4v76h56V42.3c0-0.2,0-0.4,0-0.6v-0.5l-0.4-0.4c-0.1-0.1-0.2-0.3-0.4-0.4L39.6,20.7 c-0.1-0.1-0.2-0.3-0.4-0.4L38.8,20h-0.5C38.2,20,38.1,20,38,20z M8,24h28v20h20v48H8L8,24z M40,26.8L53.2,40H40V26.8z M60.5,36 l4,4H84v-4L60.5,36z M64,48v4h12v-4H64z M16,52v4h32v-4H16z M64,60v4h20v-4H64z M16,64v4h24v-4H16z M16,76v4h32v-4H16z"></path></svg>';
-
+const svgCopy = '<svg height="16" width="16" viewBox="0 0 16 16" version="1.1" data-view-component="true" class="copy"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>';
+const svgSuccess = '<svg height="16" width="16" viewBox="0 0 16 16" version="1.1" data-view-component="true" class="copy-success"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg>';
 
 export default class CMSyntaxHighlightPlugin extends Plugin {
 
@@ -49,7 +49,7 @@ export default class CMSyntaxHighlightPlugin extends Plugin {
 
       const button = document.createElement('div');
       button.className = 'copy-code-button';
-      button.setAttribute('aria-label', 'Copy code block');
+      button.setAttribute('aria-label', 'Copy');
       button.innerHTML = svgCopy;
 
       button.addEventListener('click', function () {
@@ -58,7 +58,7 @@ export default class CMSyntaxHighlightPlugin extends Plugin {
                   leaving the button in a focused state. */
               button.blur();
 
-              button.innerText = 'Code has been copied!';
+              button.innerHTML = svgSuccess;
 
               setTimeout(function () {
                   button.innerHTML = svgCopy;
