@@ -58,6 +58,9 @@ You may have to reload obsidian (`ctrl+R`) to see changes.
 
 # Version History
 
+## v0.2.1
+Forked project to update manifest.json
+
 ## v0.2.0
 Add excluded languages, currently only includes "todoist" to be compatible with the todoist plugin. Will add setting page to add custom exclude languages in future.
 
