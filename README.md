@@ -1,7 +1,7 @@
 # Code block copy Obsidian Plugin
 A plugin for [Obsidian](https://obsidian.md) that provides copy buttons on code blocks in preview.
 
-![Screenshot](https://github.com/jdbrice/obsidian-code-block-copy/raw/main/screenshot.png)
+![Screenshot](https://github.com/nyable/obsidian-code-block-copy/raw/master/screenshot.png)
 Shown along with the "Editor Syntax Highlight" and "Calendar" plugins.
 
 This plugin adds a copy button to the top right of code blocks in preview mode.
@@ -57,6 +57,10 @@ dependencies are installed use `npm run dev` to start compilation in watch mode.
 You may have to reload obsidian (`ctrl+R`) to see changes.
 
 # Version History
+
+## v0.3.0
+Feature: Display language name in preview mode;
+Fixed: Button position overflow when language is empty;
 
 ## v0.2.0
 Add excluded languages, currently only includes "todoist" to be compatible with the todoist plugin. Will add setting page to add custom exclude languages in future.
