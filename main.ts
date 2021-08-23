@@ -28,11 +28,12 @@ export default class CMSyntaxHighlightPlugin extends Plugin {
       const codeClassList = code.classList
       const preClassList = pre.classList
       for (let lang of excludeLangs) {
-        if (codeClassList.length === 0) {
-          preClassList.add(DEFAULT_LANG)
-        }
         if (preClassList.contains(`language-${lang}`))
           return;
+      }
+      // Add default language style when lang is empty
+      if (!codeClassList.toString().contains('language-')) {
+        preClassList.add(DEFAULT_LANG)
       }
       // Ignore already has copy button 
       if (pre.querySelector('button.code-block-copy-button')) {
@@ -40,9 +41,10 @@ export default class CMSyntaxHighlightPlugin extends Plugin {
       }
       // let pre be position: relative;
       preClassList.add(CODE_BLOCK_WRAP)
-      code.classList.forEach((value, key, parent) => {
+      codeClassList.forEach((value, key, parent) => {
         if (LAN_REG.test(value)) {
           lang = value.replace('language-', '')
+          return
         }
       })
       // create lang tip in left
