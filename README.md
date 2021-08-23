@@ -1,7 +1,7 @@
 # Code block copy Obsidian Plugin
 A plugin for [Obsidian](https://obsidian.md) that provides copy buttons on code blocks in preview.
 
-![Screenshot](https://github.com/nyable/obsidian-code-block-copy/raw/master/screenshot.png)
+![Screenshot](https://github.com/nyable/obsidian-code-block-copy/raw/master/screenshot.png)   
 Shown along with the "Editor Syntax Highlight" and "Calendar" plugins.
 
 This plugin adds a copy button to the top right of code blocks in preview mode.
