@@ -59,7 +59,7 @@ You may have to reload obsidian (`ctrl+R`) to see changes.
 # Version History
 
 ## v0.3.0
-Feature: Display language name in preview mode;
+Feature: Display language name in preview mode;  
 Fixed: Button position overflow when language is empty;
 
 ## v0.2.0
