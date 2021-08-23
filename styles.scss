@@ -1,4 +1,4 @@
-.copy-code-button {
+.code-block-copy-button {
   color: var(--background-primary);
   background-color: var(--text-faint);
   border-radius: 1px 1px 0px 0px;
@@ -16,13 +16,20 @@
   top: 0px;
   right: 0px;
 }
-
-.copy-code-button:hover {
+.code-block-lang-tip {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: var(--text-normal);
+  font-size: 0.8em;
+  margin-left: 4px;
+}
+.code-block-copy-button:hover {
   cursor: pointer;
   background-color: var(--text-normal);
 }
 
-.copy-code-button:focus {
+.code-block-copy-button:focus {
   /* Avoid an ugly focus outline on click in Chrome,
      but darken the button for accessibility.
      See https://stackoverflow.com/a/25298082/1481479 */
@@ -30,7 +37,7 @@
   outline: 0;
 }
 
-.copy-code-button:active {
+.code-block-copy-button:active {
   background-color: var(--text-normal);
 }
 
@@ -39,6 +46,6 @@
   margin: 0;
 }
 
-.has-copy-button {
+pre[class*="language-"].code-block-wrap {
   position: relative;
 }
